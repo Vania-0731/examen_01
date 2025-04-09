@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Hábitos</title>
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <!-- Agregar Font Awesome para los iconos -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <h1>Lista de Hábitos</h1>
+        <h1><i class="fas fa-list"></i> Lista de Hábitos</h1> <!-- Icono al lado del título -->
         <ul class="habit-list">
             {% for habit in habits %}
                 <li class="habit-item">
@@ -20,15 +22,21 @@
                         <p>{{ habit.description }}</p>
                     </div>
                     <div class="habit-actions">
-                        <a href="{% url 'edit_habit' pk=habit.pk %}" class="btn edit-btn">Editar</a>
-                        <a href="{% url 'delete_habit' pk=habit.pk %}" class="btn delete-btn" onclick="return confirm('¿Estás seguro de que quieres eliminar este hábito?');">Eliminar</a>
+                        <a href="{% url 'edit_habit' pk=habit.pk %}" class="btn edit-btn">
+                            <i class="fas fa-edit"></i> Editar
+                        </a>
+                        <a href="{% url 'delete_habit' pk=habit.pk %}" class="btn delete-btn" onclick="return confirm('¿Estás seguro de que quieres eliminar este hábito?');">
+                            <i class="fas fa-trash-alt"></i> Eliminar
+                        </a>
                     </div>
                 </li>
             {% empty %}
                 <p>No tienes hábitos registrados. <a href="{% url 'create_habit' %}" class="btn create-btn">Crea uno ahora</a>.</p>
             {% endfor %}
         </ul>
-        <a href="{% url 'create_habit' %}" class="btn create-btn">Crear nuevo hábito</a>
+        <a href="{% url 'create_habit' %}" class="btn create-btn">
+            <i class="fas fa-plus"></i> Crear nuevo hábito
+        </a>
     </div>
 </body>
 </html>
