@@ -14,7 +14,7 @@ Este proyecto es una aplicación web para la gestión de hábitos, donde puedes 
 1. Clona este repositorio en tu máquina local:
 
    ```
-   git clone <URL_DEL_REPOSITORIO>
+   git clone <https://github.com/Vania-0731/examen_01.git>
    ```
 
 2. Accede al directorio del proyecto:
