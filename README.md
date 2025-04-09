@@ -54,14 +54,19 @@ Este proyecto es una aplicación web para la gestión de hábitos, donde puedes 
    ```
    pip install django
    ```
+6. Accede al directorio Aplicacion_de_Habitos
 
-6. Realiza las migraciones de la base de datos:
+   ```
+   cd Aplicacion_de_Habitos
+   ```
+
+7. Realiza las migraciones de la base de datos:
 
    ```
    python manage.py migrate
    ```
 
-7. Ejecuta el servidor de desarrollo de Django:
+8. Ejecuta el servidor de desarrollo de Django:
 
    ```
    python manage.py runserver
