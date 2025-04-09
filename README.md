@@ -20,7 +20,7 @@ Este proyecto es una aplicación web para la gestión de hábitos, donde puedes 
 2. Accede al directorio del proyecto:
 
    ```
-   cd nombre_del_directorio
+   cd examen_01
    ```
 
 3. (Opcional) Crea un entorno virtual para aislar las dependencias del proyecto:
