@@ -6,7 +6,7 @@ def habit_list(request):
     habits = Habit.objects.all()
     return render(request, 'habitos/habit_list.html', {'habits': habits})
 
-def habit_create(request):
+def habit_create(request):  # Cambié de 'create_habit' a 'habit_create'
     if request.method == 'POST':
         form = HabitForm(request.POST)
         if form.is_valid():
@@ -14,6 +14,4 @@ def habit_create(request):
             return redirect('habit_list')
     else:
         form = HabitForm()
-    return render(request, 'habits/habit_form.html', {'form': form})
-
-# Create your views here.
+    return render(request, 'habitos/habit_form.html', {'form': form})
