@@ -72,7 +72,7 @@ Este proyecto es una aplicación web para la gestión de hábitos, donde puedes 
 ## Archivos principales
 
 - **index.html**: Página principal donde se muestran los hábitos.
-- **create_habit.html**: Página para crear un nuevo hábito.
+- **habit_form.html**: Página para crear un nuevo hábito.
 - **views.py**: Controladores para manejar las vistas de la aplicación.
 - **models.py**: Definición del modelo de datos para los hábitos.
 - **static/css/styles.css**: Estilos para la interfaz de usuario.
