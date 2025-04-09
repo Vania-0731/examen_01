@@ -1,15 +1,34 @@
+{% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Hábitos</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
-    <h1>Lista de Hábitos</h1>
-    <ul>
-        {% for habit in habits %}
-            <li>{{ habit.name }}: {{ habit.description }}</li>
-        {% endfor %}
-    </ul>
-    <a href="{% url 'habit_create' %}">Crear un nuevo hábito</a>
+    <div class="container">
+        <h1>Lista de Hábitos</h1>
+        <ul class="habit-list">
+            {% for habit in habits %}
+                <li class="habit-item">
+                    <div class="habit-header">
+                        <span class="habit-name">{{ habit.name }}</span>
+                    </div>
+                    <div class="habit-description">
+                        <p>{{ habit.description }}</p>
+                    </div>
+                    <div class="habit-actions">
+                        <a href="{% url 'edit_habit' pk=habit.pk %}" class="btn edit-btn">Editar</a>
+                        <a href="{% url 'delete_habit' pk=habit.pk %}" class="btn delete-btn" onclick="return confirm('¿Estás seguro de que quieres eliminar este hábito?');">Eliminar</a>
+                    </div>
+                </li>
+            {% empty %}
+                <p>No tienes hábitos registrados. <a href="{% url 'create_habit' %}" class="btn create-btn">Crea uno ahora</a>.</p>
+            {% endfor %}
+        </ul>
+        <a href="{% url 'create_habit' %}" class="btn create-btn">Crear nuevo hábito</a>
+    </div>
 </body>
 </html>

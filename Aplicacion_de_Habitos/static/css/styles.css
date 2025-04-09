@@ -1,0 +1,161 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal */
+.container {
+    width: 80%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Estilo para la lista de hábitos */
+.habit-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.habit-item {
+    background-color: #f4f4f4;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.habit-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.habit-name {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.habit-description {
+    margin-top: 10px;
+    font-size: 1em;
+    color: #555;
+    display: none;
+}
+
+.habit-actions {
+    margin-top: 15px;
+}
+
+.btn {
+    padding: 6px 12px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9em;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.create-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.create-btn:hover {
+    background-color: #45a049;
+}
+
+.edit-btn {
+    background-color: #FFA500;
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: #ff8c00;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #e53935;
+}
+
+.toggle-btn {
+    background-color: #007BFF;
+    color: white;
+    font-size: 1.1em;
+    border: none;
+    cursor: pointer;
+}
+
+.toggle-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Si se desea que al hacer hover se muestre la descripción, podemos usar esta clase */
+.habit-item:hover .habit-description {
+    display: block;
+}
+
+/* Estilo para el formulario */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form p {
+    margin-bottom: 15px;
+}
+
+input[type="text"],
+textarea {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    border-color: #4CAF50;
+}
+
+/* Botón de envío */
+.btn.submit-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    font-size: 1.1em;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.btn.submit-btn:hover {
+    background-color: #45a049;
+}
