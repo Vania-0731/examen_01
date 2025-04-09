@@ -1,0 +1,15 @@
+# Entorno virtual
+venv/
+
+# Archivos de Python
+__pycache__/
+*.pyc
+
+# Archivos de Django
+db.sqlite3
+
+# Configuraciones de entorno
+.env
+
+# Archivos de VSCode u otros editores
+.vscode/
