@@ -4,7 +4,7 @@ from .forms import HabitForm
 
 def habit_list(request):
     habits = Habit.objects.all()
-    return render(request, 'habits/habit_list.html', {'habits': habits})
+    return render(request, 'habitos/habit_list.html', {'habits': habits})
 
 def habit_create(request):
     if request.method == 'POST':
