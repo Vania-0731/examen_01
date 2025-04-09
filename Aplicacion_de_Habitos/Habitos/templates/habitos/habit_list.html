@@ -1,0 +1,7 @@
+<h1>Lista de Hábitos</h1>
+<ul>
+  {% for habit in habits %}
+    <li>{{ habit.name }}: {{ habit.description }}</li>
+  {% endfor %}
+</ul>
+<a href="{% url 'create_habit' %}">Crear nuevo hábito</a>
